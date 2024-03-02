@@ -28,7 +28,7 @@ app.get("/ping", (req, res) => {
 app.post("/send-email", (req, res) => {
   const { name, email, phone, message } = {
     name: "A S Vijayavitthala",
-    email: "asvijayavitthala@gmail.com",
+    email: "jenisonmonteiro05@gmail.com",
     phone: "9481837702",
     message: "hello testing1",
   };
