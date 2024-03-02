@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Express JS on Vercel");
