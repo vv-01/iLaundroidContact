@@ -14,6 +14,14 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Express JS on Vercel");
+});
+
+app.get("/ping", (req, res) => {
+  res.send("pong 🏓");
+});
+
 app.post("/send-email", (req, res) => {
   const { name, email, phone, message } = {
     name: "A S Vijayavitthala",
