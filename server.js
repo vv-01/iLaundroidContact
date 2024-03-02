@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
@@ -13,6 +14,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
