@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 const express = require("express");
+const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
 const port = process.env.port || 3000;
@@ -12,7 +13,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use(express.json());
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send("Express JS on Vercel");
