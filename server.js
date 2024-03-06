@@ -18,7 +18,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("Express JS on Vercel");
+  res.send("Express JS to post Data");
 });
 
 app.get("/ping", (req, res) => {
