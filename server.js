@@ -26,21 +26,17 @@ app.get("/ping", (req, res) => {
 });
 
 app.post("/send-email", (req, res) => {
-  const { name, email, phone, message } = {
-    name: "A S Vijayavitthala",
-    email: "jenisonmonteiro05@gmail.com",
-    phone: "9481837702",
-    message: "hello testing1",
-  };
+  const { name, email, phone, message } = req.body;
+  console.log(res);
 
   const mailOptions = {
     from: email,
-    to: "jenisonmonteiro05@gmail.com",
+    to: "asvijayavitthala@gmail.com",
     subject: `New message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
   };
 
-  console.log(mailOptions);
+  //   console.log(mailOptions);
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
